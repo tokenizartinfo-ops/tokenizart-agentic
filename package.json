@@ -1,0 +1,20 @@
+{
+  "name": "@tokenizart/agentic",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Contract-first public MCP client, CLI and future Agent Skills for Tokenizart.",
+  "type": "module",
+  "bin": {
+    "tokenizart": "./bin/tokenizart.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "cli": "node bin/tokenizart.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "2.0.0"
+  }
+}

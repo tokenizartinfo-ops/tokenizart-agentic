@@ -1,0 +1,74 @@
+{
+  "schema": "tokenizart.cli",
+  "version": "1.0.0",
+  "status": "alpha_local_read_only",
+  "package": "@tokenizart/agentic",
+  "binary": "tokenizart",
+  "profiles": [
+    "local",
+    "staging",
+    "production"
+  ],
+  "production_default": "blocked_without_explicit_environment_gate",
+  "commands": [
+    {
+      "name": "knowledge.list",
+      "mcp_tool": "knowledge.list",
+      "mode": "read_only"
+    },
+    {
+      "name": "knowledge.get",
+      "mcp_tool": "knowledge.get",
+      "mode": "read_only"
+    },
+    {
+      "name": "knowledge.search",
+      "mcp_tool": "knowledge.search",
+      "mode": "read_only"
+    },
+    {
+      "name": "gallery.artwork-traceability",
+      "mcp_tool": "readPublicArtworkTraceabilityLinks",
+      "mode": "read_only"
+    },
+    {
+      "name": "gallery.certify-traceability",
+      "mcp_tool": "readPublicCertifyTraceabilityLinks",
+      "mode": "read_only"
+    },
+    {
+      "name": "demo.open",
+      "mcp_tool": null,
+      "mode": "allowlisted_url_only"
+    }
+  ],
+  "exit_codes": {
+    "0": "success",
+    "2": "usage",
+    "3": "configuration",
+    "4": "authentication",
+    "5": "not_found",
+    "6": "policy",
+    "7": "network_or_protocol",
+    "8": "upstream"
+  },
+  "secret_policy": {
+    "command_line_flags": "forbidden",
+    "environment_only": [
+      "TOKENIZART_MCP_ADMIN_SECRET",
+      "TOKENIZART_MCP_ACCESS_CLIENT_ID",
+      "TOKENIZART_MCP_ACCESS_CLIENT_SECRET"
+    ],
+    "output_and_logs": "forbidden"
+  },
+  "blocked_actions": [
+    "Mint",
+    "Certify",
+    "transfer",
+    "voucher mutation",
+    "privacy mutation",
+    "NFC binding",
+    "upload",
+    "wallet signing"
+  ]
+}
