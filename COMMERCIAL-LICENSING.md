@@ -21,3 +21,11 @@ Apache-2.0 and CC BY 4.0 do not themselves grant white-label rights to
 Tokenizart branding or hosted services. Commercial inquiries:
 `tokenizart.info@gmail.com`.
 
+The four versioned integration modes and their responsibility boundaries are
+documented in [Commercial Paths for Integrators](docs/INTEGRATOR-COMMERCIAL-PATHS.md),
+the [Spanish guide](docs/INTEGRATOR-COMMERCIAL-PATHS.es.md) and the
+[machine-readable policy](contracts/tokenizart-commercial-integration-policy.v1.json).
+
+Public materials are not a standing price offer. Attributed integrations,
+managed white-label services and enterprise OEM rights require a signed
+commercial agreement.
