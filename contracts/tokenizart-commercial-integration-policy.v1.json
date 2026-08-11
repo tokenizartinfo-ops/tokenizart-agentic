@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokenizart.com/schemas/tokenizart-commercial-integration-policy.v1.json",
+  "contract": "tokenizart.commercial_integration_policy.v1",
+  "version": "1.0.0",
+  "approved_at": "2026-08-11",
+  "approved_by": "Gabriel Mucchiut",
+  "access_level": "Nivel 5",
+  "status": "verified",
+  "default_mode": "public_readonly",
+  "business_formula": "Interoperabilidad abierta, conocimiento atribuible, ejecucion propietaria y marca protegida.",
+  "commercial_modes": [
+    {
+      "id": "public_readonly",
+      "label": "Public read-only",
+      "purpose": "Discover and consume verified public knowledge, public Gallery traceability and open client artifacts.",
+      "activation": "public_license_terms",
+      "granted_capabilities": [
+        "public_knowledge_read",
+        "public_gallery_traceability_read",
+        "public_contract_discovery",
+        "public_skill_discovery",
+        "demo_atelier_open"
+      ],
+      "hosted_execution": "none",
+      "brand_regime": "nominative_attribution_only",
+      "commercial_trigger": "none_for_the_express_public_rights"
+    },
+    {
+      "id": "attributed_integration",
+      "label": "Attributed integration",
+      "purpose": "Present Tokenizart-backed public results in a third-party site, application or agent.",
+      "activation": "signed_commercial_agreement",
+      "granted_capabilities": [
+        "contracted_public_api_access",
+        "contracted_public_mcp_access",
+        "public_result_embedding"
+      ],
+      "hosted_execution": "contracted_services_only",
+      "brand_regime": "visible_tokenizart_attribution",
+      "commercial_trigger": "hosted_quota_support_or_embedded_service"
+    },
+    {
+      "id": "managed_white_label",
+      "label": "Managed white label",
+      "purpose": "Use a customized frontend, domain or workflow backed by Tokenizart-operated services.",
+      "activation": "signed_commercial_agreement",
+      "granted_capabilities": [
+        "contracted_custom_frontend",
+        "contracted_domain_configuration",
+        "contracted_workflow_configuration"
+      ],
+      "hosted_execution": "tokenizart_managed_core_under_contract",
+      "brand_regime": "written_brand_and_attribution_annex",
+      "commercial_trigger": "custom_brand_domain_workflow_or_managed_operations"
+    },
+    {
+      "id": "enterprise_oem",
+      "label": "Enterprise OEM",
+      "purpose": "Provide a deeper institutional integration with agreed quotas, governance, support and service levels.",
+      "activation": "signed_commercial_agreement",
+      "granted_capabilities": [
+        "contracted_enterprise_integration",
+        "contracted_usage_quota",
+        "contracted_support_and_governance"
+      ],
+      "hosted_execution": "tokenizart_core_or_expressly_agreed_deployment_model",
+      "brand_regime": "written_oem_license_and_brand_annex",
+      "commercial_trigger": "institutional_scale_oem_rights_sla_or_custom_governance"
+    }
+  ],
+  "voucher_and_execution_principles": {
+    "voucher_role": "A voucher is a Tokenizart commercial entitlement for an eligible platform action; it is not blockchain gas or cryptocurrency.",
+    "gas_role": "Transaction gas and sponsorship are infrastructure concerns governed by Tokenizart policy and the applicable service agreement.",
+    "api_quota_role": "API or MCP quotas govern service consumption and do not replace action-specific commercial entitlements.",
+    "execution_rule": "Public licenses and discovery artifacts do not authorize hosted business execution."
+  },
+  "pricing_policy": {
+    "standing_price_offer": false,
+    "enterprise_mechanism": "commercial_quotation",
+    "quotation_inputs": [
+      "authorized_scope",
+      "action_volume",
+      "infrastructure_consumption",
+      "support_and_service_level",
+      "security_and_compliance",
+      "branding_and_oem_rights"
+    ]
+  },
+  "responsibility_boundaries": {
+    "tokenizart": [
+      "operate_the_proprietary_services_expressly_included_in_the_agreement",
+      "apply_platform_identity_consent_scope_and_audit_controls",
+      "maintain_the_agreed_voucher_usage_and_hosted_execution_boundary",
+      "protect_tokenizart_marks_and_operational_security"
+    ],
+    "integrator": [
+      "operate_its_frontend_agent_content_and_user_experience",
+      "use_public_data_and_tokenizart_marks_only_within_granted_rights",
+      "avoid_claims_beyond_verified_evidence",
+      "implement_its_agreed_security_privacy_and_support_obligations"
+    ],
+    "customer_or_institution": [
+      "provide_authorized_content_and_lawful_instructions",
+      "obtain_required_rights_and_owner_permissions",
+      "select_the_agreed_visibility_brand_and_service_scope",
+      "comply_with_the_applicable_commercial_and_usage_terms"
+    ]
+  },
+  "required_agreement_annexes": [
+    "service_and_scope_annex",
+    "brand_and_attribution_annex",
+    "usage_voucher_and_billing_annex",
+    "data_privacy_and_owner_permissions_annex",
+    "security_incident_and_audit_annex",
+    "support_service_level_and_maintenance_annex",
+    "term_suspension_exit_and_portability_annex"
+  ],
+  "blocked_public_capabilities": [
+    "mint_execute",
+    "certify_execute",
+    "transfer_execute",
+    "voucher_mutation",
+    "privacy_mutation",
+    "nfc_binding",
+    "upload",
+    "wallet_signing",
+    "owner_context",
+    "gestion_admin"
+  ],
+  "trademark_boundary": {
+    "public_license_grant": "none",
+    "nominative_use": "accurate_reference_to_tokenizart_only",
+    "white_label_or_oem_use": "written_agreement_required",
+    "no_implied_affiliation": true
+  },
+  "failure_policy": {
+    "unknown_mode": "public_readonly",
+    "missing_written_agreement": "deny_white_label_and_oem_rights",
+    "missing_identity_consent_or_scope": "deny_owner_data",
+    "missing_execution_entitlement": "deny_hosted_action",
+    "unverified_price_or_service_level": "do_not_publish_or_promise"
+  }
+}

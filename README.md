@@ -10,7 +10,10 @@ MCP Registry or production.
 contracts, public skills and attributable knowledge while hosted execution,
 vouchers, transaction sponsorship, owner services and NFC operations remain
 proprietary. See [Business Model](docs/BUSINESS-MODEL.md),
-[Spanish version](docs/BUSINESS-MODEL.es.md) and [License Policy](LICENSE-POLICY.md).
+[Spanish version](docs/BUSINESS-MODEL.es.md),
+[Commercial Paths for Integrators](docs/INTEGRATOR-COMMERCIAL-PATHS.md),
+[modalidades comerciales en espanol](docs/INTEGRATOR-COMMERCIAL-PATHS.es.md)
+and [License Policy](LICENSE-POLICY.md).
 
 ## Current capabilities
 
@@ -84,4 +87,5 @@ The versioned boundary is `contracts/tokenizart-cli.v1.json`.
 - [Artifact index](artifacts/index.json)
 - [API and MCP terms](API-TERMS.md)
 - [Commercial and white-label licensing](COMMERCIAL-LICENSING.md)
+- [Commercial integration policy contract](contracts/tokenizart-commercial-integration-policy.v1.json)
 - [Data and asset rights](DATA-AND-ASSETS-POLICY.md)

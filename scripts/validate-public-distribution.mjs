@@ -11,6 +11,9 @@ const REQUIRED_FILES = [
   "DATA-AND-ASSETS-POLICY.md",
   "API-TERMS.md",
   "COMMERCIAL-LICENSING.md",
+  "contracts/tokenizart-commercial-integration-policy.v1.json",
+  "docs/INTEGRATOR-COMMERCIAL-PATHS.md",
+  "docs/INTEGRATOR-COMMERCIAL-PATHS.es.md",
   "okf/LICENSE.md",
   "okf/v0.2/manifest.json",
 ];
@@ -23,6 +26,24 @@ const REQUIRED_SKILLS = [
 
 const IGNORED_DIRECTORIES = new Set([".git", "node_modules"]);
 const TEXT_EXTENSIONS = new Set([".js", ".json", ".md", ".mjs", ".txt", ".yaml", ".yml"]);
+const COMMERCIAL_MODE_IDS = [
+  "public_readonly",
+  "attributed_integration",
+  "managed_white_label",
+  "enterprise_oem",
+];
+const BLOCKED_PUBLIC_CAPABILITIES = [
+  "mint_execute",
+  "certify_execute",
+  "transfer_execute",
+  "voucher_mutation",
+  "privacy_mutation",
+  "nfc_binding",
+  "upload",
+  "wallet_signing",
+  "owner_context",
+  "gestion_admin",
+];
 
 function normalized(relativePath) {
   return relativePath.split(path.sep).join("/");
@@ -86,6 +107,75 @@ export function validateSkillDocument(text, relativePath) {
   return errors;
 }
 
+export function validateCommercialIntegrationPolicy(policy, relativePath) {
+  const errors = [];
+  const text = JSON.stringify(policy);
+  const modes = Array.isArray(policy?.commercial_modes) ? policy.commercial_modes : [];
+  const modeIds = modes.map((mode) => mode?.id);
+
+  if (policy?.contract !== "tokenizart.commercial_integration_policy.v1") {
+    errors.push(`${relativePath}: contract identifier must be tokenizart.commercial_integration_policy.v1`);
+  }
+  if (policy?.access_level !== "Nivel 5") {
+    errors.push(`${relativePath}: commercial policy must be Nivel 5`);
+  }
+  if (policy?.business_formula !== "Interoperabilidad abierta, conocimiento atribuible, ejecucion propietaria y marca protegida.") {
+    errors.push(`${relativePath}: approved business formula is required`);
+  }
+  if (JSON.stringify(modeIds) !== JSON.stringify(COMMERCIAL_MODE_IDS)) {
+    errors.push(`${relativePath}: exactly four commercial modes in canonical order are required`);
+  }
+  if (policy?.default_mode !== "public_readonly") {
+    errors.push(`${relativePath}: unknown integrations must default to public_readonly`);
+  }
+  if (/\bNivel\s+[1-4]\b/i.test(text)) {
+    errors.push(`${relativePath}: private access levels are not allowed in the public contract`);
+  }
+  if (/(?:\b(?:USD|EUR|ARS)\s*\d|\b\d+(?:[.,]\d+)?\s*(?:USD|EUR|ARS)\b|(?:US)?\$\s*\d)/i.test(text)) {
+    errors.push(`${relativePath}: numeric public price is not allowed`);
+  }
+  if (policy?.pricing_policy?.standing_price_offer !== false) {
+    errors.push(`${relativePath}: public policy must not be a standing price offer`);
+  }
+  if (policy?.pricing_policy?.enterprise_mechanism !== "commercial_quotation") {
+    errors.push(`${relativePath}: enterprise pricing mechanism must be commercial_quotation`);
+  }
+
+  const blocked = Array.isArray(policy?.blocked_public_capabilities)
+    ? policy.blocked_public_capabilities
+    : [];
+  for (const capability of BLOCKED_PUBLIC_CAPABILITIES) {
+    if (!blocked.includes(capability)) {
+      errors.push(`${relativePath}: blocked public capability missing (${capability})`);
+    }
+  }
+
+  for (const mode of modes) {
+    const granted = Array.isArray(mode?.granted_capabilities) ? mode.granted_capabilities : [];
+    const modeText = JSON.stringify(mode);
+    const forbidden = BLOCKED_PUBLIC_CAPABILITIES.filter((capability) =>
+      granted.includes(capability) || modeText.includes(capability)
+    );
+    if (forbidden.length > 0) {
+      errors.push(`${relativePath}: mutation capability granted by ${mode.id} (${forbidden.join(", ")})`);
+    }
+    if (mode?.id !== "public_readonly" && mode?.activation !== "signed_commercial_agreement") {
+      errors.push(`${relativePath}: ${mode?.id || "unknown mode"} requires a signed commercial agreement`);
+    }
+  }
+
+  for (const actor of ["tokenizart", "integrator", "customer_or_institution"]) {
+    if (!Array.isArray(policy?.responsibility_boundaries?.[actor])) {
+      errors.push(`${relativePath}: responsibility boundary missing (${actor})`);
+    }
+  }
+  if (!Array.isArray(policy?.required_agreement_annexes) || policy.required_agreement_annexes.length < 6) {
+    errors.push(`${relativePath}: at least six agreement annexes are required`);
+  }
+
+  return [...new Set(errors)].sort();
+}
+
 function validateOkfConcept(text, relativePath) {
   const errors = [];
   if (!/^status:\s*stable\s*$/m.test(text)) errors.push(`${relativePath}: OKF status must be stable`);
@@ -117,6 +207,17 @@ export async function validatePublicDistribution(root) {
       } catch (error) {
         errors.push(`${file.relative}: invalid JSON (${error.message})`);
       }
+    }
+  }
+
+  const commercialPolicyPath = "contracts/tokenizart-commercial-integration-policy.v1.json";
+  const commercialPolicyAbsolute = path.join(root, commercialPolicyPath);
+  if (await exists(commercialPolicyAbsolute)) {
+    try {
+      const policy = JSON.parse(await fs.readFile(commercialPolicyAbsolute, "utf8"));
+      errors.push(...validateCommercialIntegrationPolicy(policy, commercialPolicyPath));
+    } catch (error) {
+      errors.push(`${commercialPolicyPath}: cannot validate (${error.message})`);
     }
   }
 
