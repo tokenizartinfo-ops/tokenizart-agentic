@@ -22,11 +22,15 @@ source-sha256: 9ca2264a27979b63a84927e01a9302f1ae417d6e34396b422b332801784cd245
 
 # Manual Transfer
 
-![Transfer informacion general](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p091.png)
-![Transfer steps](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p092.png)
-![Transfer visualizacion](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p093.png)
-![Transfer verificacion](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p094.png)
-![Transfer observaciones](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p095.png)
+## Recorrido disponible
+
+- [Transferencia: informacion general y limites](../Actions/Venta-y-Transferencia.md)
+- [Transferencia: secuencia completa](../Micro-Steps/Venta-y-Transferencia-Micro-Steps.md)
+- [Manual visual, pagina 91: concepto](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=91)
+- [Manual visual, pagina 92: pasos](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=92)
+- [Manual visual, pagina 93: visualizacion](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=93)
+- [Manual visual, pagina 94: verificacion](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=94)
+- [Manual visual, pagina 95: observaciones](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=95)
 
 ## Alcance de verificacion
 

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokenizart.com/schemas/commercial-onboarding-intake.v1.schema.json",
+  "title": "Tokenizart Commercial Onboarding Intake v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract", "organization", "use_case", "audiences", "requested_capabilities", "branding", "delivery", "volume", "support", "data_scope"],
+  "properties": {
+    "contract": {"const": "tokenizart.commercial_onboarding_intake.v1"},
+    "organization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type", "country"],
+      "properties": {
+        "name": {"type": "string", "minLength": 2, "maxLength": 160},
+        "type": {"enum": ["artist", "gallery", "museum", "expert", "collector", "company", "institution", "integrator", "other"]},
+        "country": {"type": "string", "minLength": 2, "maxLength": 80},
+        "website": {"type": "string", "format": "uri", "maxLength": 500}
+      }
+    },
+    "use_case": {"type": "string", "minLength": 20, "maxLength": 3000},
+    "audiences": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["public", "registered_users", "owners", "professionals", "institutions", "internal_team"]}
+    },
+    "requested_capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["public_knowledge", "public_gallery", "public_traceability", "demo_atelier", "hosted_read_api", "owner_readonly", "mint_prepare", "certify_prepare", "transfer_prepare", "nfc_prepare", "custom_frontend", "custom_reporting"]}
+    },
+    "branding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "custom_domain"],
+      "properties": {
+        "mode": {"enum": ["tokenizart", "attributed", "white_label", "oem"]},
+        "custom_domain": {"type": "boolean"}
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "third_party_frontend"],
+      "properties": {
+        "model": {"enum": ["public_files", "tokenizart_hosted", "dedicated", "customer_cloud"]},
+        "third_party_frontend": {"type": "boolean"}
+      }
+    },
+    "volume": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["monthly_reads", "monthly_actions", "artworks", "users", "nfc_units"],
+      "properties": {
+        "monthly_reads": {"type": "integer", "minimum": 0},
+        "monthly_actions": {"type": "integer", "minimum": 0},
+        "artworks": {"type": "integer", "minimum": 0},
+        "users": {"type": "integer", "minimum": 0},
+        "nfc_units": {"type": "integer", "minimum": 0}
+      }
+    },
+    "support": {"enum": ["community", "standard", "business_hours", "critical_24x7"]},
+    "data_scope": {"enum": ["public_only", "owner_readonly", "owner_actions", "gestion_admin"]},
+    "compliance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "regulated": {"type": "boolean"},
+        "data_residency_required": {"type": "boolean"},
+        "countries": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 2, "maxLength": 80}}
+      }
+    },
+    "target_date": {"type": "string", "format": "date"},
+    "notes": {"type": "string", "maxLength": 3000}
+  }
+}
