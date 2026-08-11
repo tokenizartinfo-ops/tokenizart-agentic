@@ -88,4 +88,8 @@ The versioned boundary is `contracts/tokenizart-cli.v1.json`.
 - [API and MCP terms](API-TERMS.md)
 - [Commercial and white-label licensing](COMMERCIAL-LICENSING.md)
 - [Commercial integration policy contract](contracts/tokenizart-commercial-integration-policy.v1.json)
+- [Public Atelier action guides](docs/ACTION-GUIDES.es.md)
+- [Machine-readable action guide contract](contracts/tokenizart-public-action-guides.v1.json)
+- [Commercial onboarding scope form](docs/COMMERCIAL-ONBOARDING.es.md)
+- [Commercial onboarding intake schema](contracts/tokenizart-commercial-onboarding-intake.v1.schema.json)
 - [Data and asset rights](DATA-AND-ASSETS-POLICY.md)

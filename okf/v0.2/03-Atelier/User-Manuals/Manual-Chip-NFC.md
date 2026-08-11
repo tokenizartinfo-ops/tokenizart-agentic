@@ -22,17 +22,15 @@ source-sha256: 2f3985c3a17195e1f132ecbacade64ab18f13b2c9e16ddda866d55db1795ac44
 
 # Manual Chip NFC
 
-![NFC informacion general](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p072.png)
-![NFC quienes interactuan](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p073.png)
-![NFC solicitud 1](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p074.png)
-![NFC solicitud 2](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p075.png)
-![NFC visualizaciones](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p076.png)
-![NFC app 1](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p077.png)
-![NFC app 2](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p078.png)
-![NFC certificador 1](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p079.png)
-![NFC certificador 2](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p080.png)
-![NFC informacion de uso](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p081.png)
-![NFC estados](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p082.png)
+## Recorrido disponible
+
+- [Chip NFC: informacion general y limites](../Actions/Vinculacion-Chip-NFC.md)
+- [Chip NFC: secuencia completa](../Micro-Steps/Vinculacion-Chip-NFC-Micro-Steps.md)
+- [Manual visual, pagina 72: concepto](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=72)
+- [Manual visual, pagina 73: actores](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=73)
+- [Manual visual, paginas 74-76: solicitud y visualizacion](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=74)
+- [Manual visual, paginas 77-80: app y certificador](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=77)
+- [Manual visual, paginas 81-82: uso y estados del tag](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=81)
 
 ## Alcance de verificacion
 

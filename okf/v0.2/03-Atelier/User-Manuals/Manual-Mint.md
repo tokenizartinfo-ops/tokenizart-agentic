@@ -22,9 +22,14 @@ source-sha256: 447f280b247e4e4edf19fa07ce24b196d74ea48c4c160b67f30cef8a07ee0777
 
 # Manual Mint
 
-![Mint informacion general](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p068.png)
-![Mint steps](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p069.png)
-![Mint por lote](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p070.png)
+## Recorrido disponible
+
+- [Mint: informacion general](../Actions/Mint.md)
+- [Mint: secuencia paso a paso](../Micro-Steps/Mint-Micro-Steps.md)
+- [Mint por lote](../Micro-Steps/Mint-Micro-Steps.md#mint-por-lote)
+- [Manual visual, pagina 68: concepto y comienzo](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=68)
+- [Manual visual, pagina 69: confirmacion y resultado](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=69)
+- [Manual visual, pagina 70: Mint por lote](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=70)
 
 ## Alcance de verificacion
 

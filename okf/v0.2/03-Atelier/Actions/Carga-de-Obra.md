@@ -69,4 +69,4 @@ Validar campos exactos de formulario y nombres UI contra la plataforma activa.
 
 ## Alcance de verificacion
 
-Verificado como flujo operativo general contra el manual Atelier y la nota [Manual-Carga-de-Obras](../User-Manuals/Manual-Carga-de-Obras.md). Los nombres exactos de botones/campos de la plataforma activa siguen pendientes de confirmacion.
+Verificado como flujo operativo general contra el manual Atelier y la [guia publica de carga de obra](../../../../docs/action-guides/CARGA-DE-OBRA.es.md). Los nombres exactos de botones/campos de la plataforma activa siguen pendientes de confirmacion.

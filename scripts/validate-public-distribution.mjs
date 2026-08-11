@@ -12,6 +12,10 @@ const REQUIRED_FILES = [
   "API-TERMS.md",
   "COMMERCIAL-LICENSING.md",
   "contracts/tokenizart-commercial-integration-policy.v1.json",
+  "contracts/tokenizart-public-action-guides.v1.json",
+  "contracts/tokenizart-commercial-onboarding-intake.v1.schema.json",
+  "docs/ACTION-GUIDES.es.md",
+  "docs/COMMERCIAL-ONBOARDING.es.md",
   "docs/INTEGRATOR-COMMERCIAL-PATHS.md",
   "docs/INTEGRATOR-COMMERCIAL-PATHS.es.md",
   "okf/LICENSE.md",
@@ -67,6 +71,38 @@ async function walk(root, current = root) {
     else output.push({ absolute, relative: normalized(path.relative(root, absolute)) });
   }
   return output;
+}
+
+function markdownRelativeTargets(text) {
+  const targets = [];
+  const pattern = /!?(?:\[[^\]]*\])\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
+  for (const match of text.matchAll(pattern)) {
+    const target = match[1].trim().replace(/^<|>$/g, "");
+    if (
+      !target ||
+      target.startsWith("#") ||
+      target.startsWith("/") ||
+      /^[a-z][a-z0-9+.-]*:/i.test(target)
+    ) {
+      continue;
+    }
+    targets.push(target);
+  }
+  return targets;
+}
+
+async function validateMarkdownRelativeLinks(root, file) {
+  const errors = [];
+  const text = await fs.readFile(file.absolute, "utf8");
+  for (const target of markdownRelativeTargets(text)) {
+    const pathOnly = decodeURIComponent(target.split(/[?#]/, 1)[0]);
+    const absoluteTarget = path.resolve(path.dirname(file.absolute), pathOnly);
+    const staysInsideRoot = absoluteTarget === root || absoluteTarget.startsWith(`${root}${path.sep}`);
+    if (!staysInsideRoot || !await exists(absoluteTarget)) {
+      errors.push(`${file.relative}: unresolved relative link (${target})`);
+    }
+  }
+  return errors;
 }
 
 export function scanTextForLeaks(text, relativePath) {
@@ -207,6 +243,9 @@ export async function validatePublicDistribution(root) {
       } catch (error) {
         errors.push(`${file.relative}: invalid JSON (${error.message})`);
       }
+    }
+    if (path.extname(file.relative).toLowerCase() === ".md") {
+      errors.push(...await validateMarkdownRelativeLinks(root, file));
     }
   }
 

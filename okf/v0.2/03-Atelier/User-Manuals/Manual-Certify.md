@@ -22,12 +22,16 @@ source-sha256: 5c0f312b3d60191b3dacaa09d4307374dd5fc662d7116cd91a9f2b5197278cde
 
 # Manual Certify
 
-![Certify informacion general](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p084.png)
-![Certify solicitud](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p085.png)
-![Certify actores](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p086.png)
-![Certify solicitud steps](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p087.png)
-![Certify visualizaciones](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p088.png)
-![Certify certificador](../../_System/Attachments/Manual-Atelier/pages/atelier-manual-p089.png)
+## Recorrido disponible
+
+- [Certify: informacion general, roles y alcance](../Actions/Certify.md)
+- [Certify: secuencia completa para owner y certificador](../Micro-Steps/Certify-Micro-Steps.md)
+- [Manual visual, pagina 84: concepto](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=84)
+- [Manual visual, pagina 85: solicitud](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=85)
+- [Manual visual, pagina 86: actores](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=86)
+- [Manual visual, pagina 87: pasos del solicitante](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=87)
+- [Manual visual, pagina 88: visualizacion y recepcion](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=88)
+- [Manual visual, pagina 89: pasos del certificador](https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=89)
 
 ## Alcance de verificacion
 

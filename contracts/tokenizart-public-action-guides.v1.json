@@ -1,0 +1,99 @@
+{
+  "contract": "tokenizart.public_action_guides.v1",
+  "version": "1.0.0",
+  "access_level": "Nivel 5",
+  "status": "stable",
+  "mode": "read_only",
+  "default_locale": "es",
+  "manual_source": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf",
+  "guides": [
+    {
+      "id": "atelier.artwork_load.public_guide.v1",
+      "flow": "artwork_load",
+      "title": "Carga de obra",
+      "human_guide": "docs/action-guides/CARGA-DE-OBRA.es.md",
+      "agent_steps": "okf/v0.2/03-Atelier/Actions/Carga-de-Obra.md",
+      "preconditions": ["atelier_user", "artwork_title"],
+      "expected_result": "editable_artwork_preload",
+      "visuals": [
+        {"page": 60, "label": "inicio", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=60"},
+        {"page": 61, "label": "datos_principales", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=61"},
+        {"page": 62, "label": "ficha_tecnica", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=62"},
+        {"page": 63, "label": "resultado_y_edicion", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=63"}
+      ]
+    },
+    {
+      "id": "atelier.mint.public_guide.v1",
+      "flow": "mint",
+      "title": "Mint",
+      "human_guide": "okf/v0.2/03-Atelier/Actions/Mint.md",
+      "agent_steps": "okf/v0.2/03-Atelier/Micro-Steps/Mint-Micro-Steps.md",
+      "preconditions": ["reviewed_artwork", "owner_role", "mint_voucher", "smart_wallet"],
+      "expected_result": "unique_digital_identity",
+      "visuals": [
+        {"page": 68, "label": "concepto_e_inicio", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=68"},
+        {"page": 69, "label": "confirmacion_y_resultado", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=69"},
+        {"page": 70, "label": "mint_por_lote", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=70"}
+      ]
+    },
+    {
+      "id": "atelier.certify.public_guide.v1",
+      "flow": "certify",
+      "title": "Certify",
+      "human_guide": "okf/v0.2/03-Atelier/Actions/Certify.md",
+      "agent_steps": "okf/v0.2/03-Atelier/Micro-Steps/Certify-Micro-Steps.md",
+      "preconditions": ["minted_artwork", "owner_request", "certifier", "certify_voucher"],
+      "expected_result": "evidence_linked_to_artwork_history",
+      "visuals": [
+        {"page": 84, "label": "concepto", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=84"},
+        {"page": 85, "label": "solicitud", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=85"},
+        {"page": 86, "label": "actores", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=86"},
+        {"page": 87, "label": "pasos_solicitante", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=87"},
+        {"page": 88, "label": "visualizacion_y_recepcion", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=88"},
+        {"page": 89, "label": "pasos_certificador", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=89"}
+      ]
+    },
+    {
+      "id": "atelier.nfc.public_guide.v1",
+      "flow": "nfc",
+      "title": "Vinculacion chip NFC",
+      "human_guide": "okf/v0.2/03-Atelier/Actions/Vinculacion-Chip-NFC.md",
+      "agent_steps": "okf/v0.2/03-Atelier/Micro-Steps/Vinculacion-Chip-NFC-Micro-Steps.md",
+      "preconditions": ["minted_artwork", "compatible_tag", "nfc_voucher", "authorized_certifier"],
+      "expected_result": "physical_digital_link_recorded",
+      "visuals": [
+        {"page": 72, "label": "concepto", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=72"},
+        {"page": 74, "label": "solicitud", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=74"},
+        {"page": 77, "label": "app_movil", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=77"},
+        {"page": 82, "label": "estados_del_tag", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=82"}
+      ]
+    },
+    {
+      "id": "atelier.transfer.public_guide.v1",
+      "flow": "transfer",
+      "title": "Transferencia de titularidad",
+      "human_guide": "okf/v0.2/03-Atelier/Actions/Venta-y-Transferencia.md",
+      "agent_steps": "okf/v0.2/03-Atelier/Micro-Steps/Venta-y-Transferencia-Micro-Steps.md",
+      "preconditions": ["minted_artwork", "owner_role", "recipient", "smart_wallet"],
+      "expected_result": "ownership_transfer_recorded",
+      "visuals": [
+        {"page": 91, "label": "concepto", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=91"},
+        {"page": 92, "label": "pasos", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=92"},
+        {"page": 93, "label": "visualizacion", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=93"},
+        {"page": 94, "label": "verificacion", "source_url": "https://tokenizart.com/wp-content/uploads/2024/04/Atelier-Manual-del-Usuario-1.pdf#page=94"}
+      ]
+    }
+  ],
+  "blocked_actions": [
+    "mint_execute",
+    "certify_execute",
+    "transfer_execute",
+    "voucher_mutation",
+    "privacy_mutation",
+    "nfc_binding",
+    "upload",
+    "wallet_signing",
+    "owner_context",
+    "gestion_admin"
+  ]
+}
