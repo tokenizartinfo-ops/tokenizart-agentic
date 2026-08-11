@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "cli": "node bin/tokenizart.js"
+    "cli": "node bin/tokenizart.js",
+    "validate:public-distribution": "node scripts/validate-public-distribution.mjs"
   },
   "engines": {
     "node": ">=20"

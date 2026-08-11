@@ -76,6 +76,10 @@ The versioned boundary is `contracts/tokenizart-cli.v1.json`.
 ## Discovery
 
 - [Public architecture](docs/ARCHITECTURE.md)
+- [Public OKF v0.2 bundle](okf/v0.2/index.md)
+- [Public knowledge skill](skills/tokenizart-public-knowledge/SKILL.md)
+- [Gallery traceability skill](skills/tokenizart-gallery-traceability/SKILL.md)
+- [Demo Atelier skill](skills/tokenizart-demo-atelier/SKILL.md)
 - [MCP preview](mcp/server.preview.json)
 - [Artifact index](artifacts/index.json)
 - [API and MCP terms](API-TERMS.md)

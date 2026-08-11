@@ -1,0 +1,185 @@
+{
+  "bundle_sha256": "b2441e4ced191e431edbd40832759d6702c308d3cb0756eaf8c629e647344500",
+  "files": [
+    {
+      "path": "index.md",
+      "sha256": "947fdb9302894c4f9145dc3de166d284e58e00431c794bfcfd9faa4513fe9efd",
+      "type": "index"
+    },
+    {
+      "path": "03-Atelier/Actions/Carga-de-Obra.md",
+      "sha256": "0230678643ec6289c2ce52159c6a92fb594d84c296bd57455e5d2839047d5fce",
+      "source_sha256": "273e8ae5387a12e11e7b5de797e07e7ee96c3d7d388550ca6b7f000bd4d18433",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Actions/Certify.md",
+      "sha256": "1428608d8c7b57b0f86e696e16bd3e849ced07f5b6c473f3a6ecb0624029bd64",
+      "source_sha256": "ef8f917488718609ab278de9a73da8077775f5c1b0f592cc6c2aed583ac0b6a6",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Actions/Mint.md",
+      "sha256": "a7f13aeb79c9a278a48b81c01e760860f64241891bc431131e659aedfb9d14a9",
+      "source_sha256": "d14d869490defb536cd6e068b447e444725eba684e29a457b8ceecff6d762ff8",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Actions/Venta-y-Transferencia.md",
+      "sha256": "4dc8ed78685625f6e712964f1fb32351bb6b34515df2ef0576db912d2d38a2ca",
+      "source_sha256": "407184622406308e438f6e7aca85557f926140379413cd44654deab31596cdf9",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Actions/Vinculacion-Chip-NFC.md",
+      "sha256": "9ffa5995ae89eccdba333a796284a3ecab56605549ff5a812ffe504db6e8a06f",
+      "source_sha256": "32e448f96a689ab796b2c2ec828965e5793ff91a8c0032251656f50ec35a76db",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Micro-Steps/Certify-Micro-Steps.md",
+      "sha256": "3a39e9e0de1905edab7f32b20f94676b388019b795b7c8cca49860e69bee92e7",
+      "source_sha256": "4e4ce1a71d66364e4719bd1e579d223d116f879ea22ca82e961ed4b91ef5dbe7",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Micro-Steps/Mint-Micro-Steps.md",
+      "sha256": "3548a1f0540bf3a64d39e97ffc1e647c8d2773816c13d85ee0d6413f7357890d",
+      "source_sha256": "d10f553d68870d9b0d534458afbd00a7f780f1e28708e723d6704da1f9d7c786",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Micro-Steps/Venta-y-Transferencia-Micro-Steps.md",
+      "sha256": "92d971ce452ab73b8bfedc7bbc51c9a028eba29926a60990920dc7e43596ca19",
+      "source_sha256": "e2de056fd6c4267f7987d9e7b548cfcefb93e91c0dde75f8b4fe120d5b72aaf7",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/Micro-Steps/Vinculacion-Chip-NFC-Micro-Steps.md",
+      "sha256": "01ac3d93e43b5c75421d348aa9b128bf9b37e02df2e1c60e5452339ca1281d2f",
+      "source_sha256": "4e76315a6718faa52162ac8bb28f47e1394fb3a42894640d5d5ecef81a7a84b9",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/User-Manuals/Manual-Atelier-Validation-2026-06-05.md",
+      "sha256": "21634a2ceae3dd6c5ee6b6738cbf1a399eff96da2a7bc08c2d68f7b71ac301b4",
+      "source_sha256": "bdb287b71c0bd08c674e287297a470ac87454cccfc8265044159c5d5b54f4cc7",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/User-Manuals/Manual-Certify.md",
+      "sha256": "0310e6343397ee8a6cecc14a7736c54a40083ea30216902fbbeab55cf3a86c1c",
+      "source_sha256": "5c0f312b3d60191b3dacaa09d4307374dd5fc662d7116cd91a9f2b5197278cde",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/User-Manuals/Manual-Chip-NFC.md",
+      "sha256": "1fa126b8d475b793e9064ace949634af7aed7378400439b4c3a6b1045803954b",
+      "source_sha256": "2f3985c3a17195e1f132ecbacade64ab18f13b2c9e16ddda866d55db1795ac44",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/User-Manuals/Manual-Mint.md",
+      "sha256": "f7fd8abc301ea178628519c7cdad9367f344d17cca39a3a10e5422a3212bcc1d",
+      "source_sha256": "447f280b247e4e4edf19fa07ce24b196d74ea48c4c160b67f30cef8a07ee0777",
+      "type": "concept"
+    },
+    {
+      "path": "03-Atelier/User-Manuals/Manual-Transfer.md",
+      "sha256": "b681d73b62b413edc1802cebbe4f3f1fc5eed1b9f591e7ecf1bbedb0158335b9",
+      "source_sha256": "9ca2264a27979b63a84927e01a9302f1ae417d6e34396b422b332801784cd245",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Beneficios-Por-Audiencia-Tokenizart-Verified-2026-07-08.md",
+      "sha256": "7d0c4726ee47157d925e4c64f7d9fe3b6a67afcb7e9eda6307255bdfb062f14d",
+      "source_sha256": "5762da7823ae687339aa2fc7f0e1d127a6b0fd689399ca6a80f3bbb699d5b9f4",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Companion-Public-Conversation-Seed-Verified-2026-07-08.md",
+      "sha256": "ee76c1a2c87fd8ff95acc2d510a69ccda5529962396cdccb5c7c7b2f07e00f2f",
+      "source_sha256": "3e1f4a4e4eafd758c587fcc98bdd57f926169758c9264eb36606108d6e551ee0",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Copropiedad-Unicidad-ERC721-Verified-2026-07-08.md",
+      "sha256": "f9472892f61b99179541c403c801c4c39d262f01bc95d4e44a59f4d5fd5e34c5",
+      "source_sha256": "91e29612ff35641613b0db9b5fe50a1445aa545208fe36ef069da5748001bacf",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Estandar-Trazabilidad-Tokenizart-Verified-2026-07-12.md",
+      "sha256": "dca73310e81bcb64a3aff16670f4514b620f6186ef4d3b026a9dddb56c1cb35f",
+      "source_sha256": "2f9de23edfbb5fa83837d53f485c0f63f3f702f9cc2e788e9ca61de4a9ca2b19",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Gnosis-Chain-Tokenizart-Verified-2026-07-08.md",
+      "sha256": "e02572416e92669e0d0db761d818fdf3361f76b390d84dd27c8bf3f15efcf11e",
+      "source_sha256": "45741640072add1710e8378ab2e1c0d0aaf60bdba2013c927545aba0e02113f7",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Mecenazgo-RSE-Micromecenazgo-Verified-2026-07-08.md",
+      "sha256": "d52937fa34772f264b55948a0fee903a5f929ac7744fc2e56c699d98f3760307",
+      "source_sha256": "75755915f36cb2628d7d0b8a99ebe986c0122d6afca295616131e2b6cd7dd4df",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Precio-Valor-Provenance-Carga-Probatoria-Verified-2026-07-08.md",
+      "sha256": "718c83970895416cf3991eb93300dafdb597e31abde2cf5d22148995cc2e69e7",
+      "source_sha256": "a64932723c65764be64292a35427eda0c2277286a580b23c0d130cd7e33f0f29",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/README.md",
+      "sha256": "9d48dd600d47daf3931cc0ef419eae1d8207281312d354b823fa94793365dab8",
+      "source_sha256": "bb3738607bbfd057c7980bdf74d6367a9a7609c5e31ebe503c0ee1fd2ddcf9a4",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Seguridad-Por-Capas-Ingot-Limites-Verified-2026-07-12.md",
+      "sha256": "edb2a532517bfd0cd4024bcffa3ee0ec144a2afebc17841e604f43d002525a8f",
+      "source_sha256": "35a591d15e4510d13c3d5907bcdf761c3781f5e9c235ed53cd2895819b9626bf",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Smart-Wallet-Vouchers-Gas-Verified-2026-07-08.md",
+      "sha256": "2baa688de2025fc6de66926d9b30c00c1e26222ba08e3d905658ce0d8d416a79",
+      "source_sha256": "0d797fd02a8fb28530c00641d661c90340d0e94b631dda518b970d0b3b57bf0d",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Tokenizart-Descubrimiento-Publico-Verified-2026-07-12.md",
+      "sha256": "b2f651ee3defaafd4af3dfeef57b7bd7e6aea54dc0833db76e3984906c8be921",
+      "source_sha256": "a93dbc8aa7292fbe3d62a116e23987175ec96ec1640ada7be9a5754dbab4941e",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/TokenizArt-Smart-Contract-Mint-Certify-ERC4337-Verified-2026-08-05.md",
+      "sha256": "1f09bbe0fc47ff9914b567ec2caf8c60c1504edde69789b26e892124016dbf54",
+      "source_sha256": "9da9110f53cf95a3d3d3c89b7ddbec45404719075b01c934fe69f96160575638",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Tokenizart-Valor-Diferencial-Marketplace-Verified-2026-07-08.md",
+      "sha256": "ba52562c5c3a29d117770681223bdeee4de400c78cd54cd44a033e4ae2d7013e",
+      "source_sha256": "e6cd382693351d3426685da6c92167f31265af45381e64e2a7724514e56f3b28",
+      "type": "concept"
+    },
+    {
+      "path": "13-Customer-Support-&-Education/Public-Knowledge/Voucher-Shop-Snapshot-Verified-2026-07-14.md",
+      "sha256": "8219af2f188d4cd34686242f98c6b333560bbd66b7060fe0b1feaa555b0639d1",
+      "source_sha256": "388efafccea3362aabd1aa56d98816faedf40e19db9ce153517e79e764594f5d",
+      "type": "concept"
+    }
+  ],
+  "generator": "tokenizart-hermes/0.1.0",
+  "okf_version": "0.2",
+  "policy": "level5_verified_embed_v1",
+  "summary": {
+    "concepts": 28,
+    "excluded": 26
+  }
+}
