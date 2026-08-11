@@ -1,0 +1,76 @@
+{
+  "schema": "tokenizart.agentic_discovery",
+  "version": "1.0.0",
+  "status": "experimental_protected",
+  "owner": "Tokenizart",
+  "surfaces": [
+    {
+      "path": "/internal/mcp-server-metadata",
+      "method": "GET",
+      "schema": "tokenizart.mcp_server_metadata",
+      "auth": "internal_access",
+      "public": false
+    },
+    {
+      "path": "/internal/skills-index",
+      "method": "GET",
+      "schema": "tokenizart.public_skills_index",
+      "auth": "internal_access",
+      "public": false
+    }
+  ],
+  "mcp": {
+    "endpoint": "/mcp",
+    "transport": "stateless_streamable_http",
+    "protocol_baseline": "2026-07-28",
+    "current_auth": "Cloudflare Access plus ADMIN_SECRET pilot",
+    "public_registry": "not_published",
+    "tools": [
+      "readPublicArtworkTraceabilityLinks",
+      "readPublicCertifyTraceabilityLinks",
+      "knowledge.list",
+      "knowledge.get",
+      "knowledge.search"
+    ]
+  },
+  "skills": [
+    {
+      "id": "tokenizart-public-knowledge",
+      "status": "contract_ready_local",
+      "access_level": "Nivel 5"
+    },
+    {
+      "id": "tokenizart-gallery-traceability",
+      "status": "contract_ready_local",
+      "access_level": "Nivel 5"
+    },
+    {
+      "id": "tokenizart-demo-atelier",
+      "status": "planned_contract_only",
+      "access_level": "Nivel 5"
+    }
+  ],
+  "publication_gates": [
+    "stable public endpoint",
+    "ownership verification",
+    "public security review",
+    "rate limits and abuse controls",
+    "privacy and support URLs",
+    "filtered public repository",
+    "explicit production approval"
+  ],
+  "blocked": [
+    "owner context",
+    "Nivel 1-4 knowledge",
+    "admin tools",
+    "Mint",
+    "Certify",
+    "transfer",
+    "voucher mutation",
+    "privacy mutation",
+    "NFC binding",
+    "uploads",
+    "wallet signing",
+    "secret disclosure"
+  ]
+}

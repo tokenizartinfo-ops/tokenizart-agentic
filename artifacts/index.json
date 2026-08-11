@@ -1,0 +1,32 @@
+{
+  "schema": "tokenizart.public_artifact_index",
+  "version": "1.0.0",
+  "updated_at": "2026-08-11",
+  "status": "local_release_candidate",
+  "artifacts": [
+    {
+      "id": "tokenizart-cli",
+      "type": "cli",
+      "version": "0.1.0",
+      "path": "./package.json",
+      "license": "Apache-2.0",
+      "publication": "not_published"
+    },
+    {
+      "id": "tokenizart-public-mcp-preview",
+      "type": "mcp_server_metadata",
+      "version": "0.1.0",
+      "path": "./mcp/server.preview.json",
+      "license": "Apache-2.0",
+      "publication": "not_published"
+    },
+    {
+      "id": "tokenizart-public-okf",
+      "type": "okf_bundle",
+      "version": "0.2",
+      "path": "./okf/",
+      "license": "CC-BY-4.0",
+      "publication": "pending_generated_bundle"
+    }
+  ]
+}

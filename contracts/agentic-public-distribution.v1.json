@@ -1,0 +1,132 @@
+{
+  "schema": "tokenizart.agentic_public_distribution",
+  "version": "1.0.0",
+  "status": "approved_architecture",
+  "approved_at": "2026-08-11",
+  "owner": "Tokenizart",
+  "protocol_baseline": {
+    "name": "Model Context Protocol",
+    "release": "2026-07-28",
+    "transport": "stateless_streamable_http",
+    "runtime": "cloudflare_workers",
+    "durable_protocol_session_required": false
+  },
+  "canonical_authority": {
+    "knowledge": [
+      "Obsidian",
+      "private GitHub repositories"
+    ],
+    "derived_only": [
+      "Gbrain",
+      "Cloudflare RAG",
+      "Graphify",
+      "OKF exports",
+      "Agent Skills",
+      "MCP responses",
+      "CLI output"
+    ]
+  },
+  "knowledge_export": {
+    "format": "OKF",
+    "version": "0.2",
+    "mode": "future_filtered_export",
+    "eligible_access_levels": [
+      "Nivel 5"
+    ],
+    "eligible_source_statuses": [
+      "verified"
+    ],
+    "fail_closed_on": [
+      "Nivel 1-4 content",
+      "secrets or credentials",
+      "raw user data",
+      "unresolved material contradictions",
+      "invalid frontmatter",
+      "unsupported status"
+    ],
+    "status_mapping": {
+      "tokenizart_verified": "okf_stable_plus_verified_record"
+    }
+  },
+  "tool_namespaces": [
+    {
+      "name": "knowledge.*",
+      "access_level": "Nivel 5",
+      "mode": "read_only"
+    },
+    {
+      "name": "gallery.*",
+      "access_level": "Nivel 5",
+      "mode": "read_only"
+    },
+    {
+      "name": "blockchain.*",
+      "access_level": "Nivel 5",
+      "mode": "read_only"
+    },
+    {
+      "name": "demo.*",
+      "access_level": "Nivel 5",
+      "mode": "read_only"
+    },
+    {
+      "name": "atelier.read.*",
+      "access_level": "Nivel 4",
+      "mode": "blocked_until_live_owner_bridge"
+    },
+    {
+      "name": "atelier.prepare.*",
+      "access_level": "Nivel 4",
+      "mode": "future_dry_run"
+    },
+    {
+      "name": "atelier.execute.*",
+      "access_level": "Nivel 4",
+      "mode": "future_separately_approved"
+    },
+    {
+      "name": "ops.fixcenter.*",
+      "access_level": "Nivel 1",
+      "mode": "internal_only"
+    }
+  ],
+  "distribution_surfaces": {
+    "remote_mcp": "primary_external_capability_runtime",
+    "agent_skills": "public_discovery_and_workflow_guidance",
+    "official_cli": "contract_first_machine_and_human_client",
+    "a2ui": "tokenizart_owned_human_ui",
+    "mcp_apps": "future_third_party_host_ui_adapter",
+    "webmcp": "future_page_local_discovery_adapter",
+    "native_plugins": "thin_client_specific_distribution_shells"
+  },
+  "cli_requirements": [
+    "json_output",
+    "explicit_profile_and_environment",
+    "stable_exit_codes",
+    "citations_and_request_ids",
+    "dry_run_default_for_preparation_or_writes",
+    "idempotency_for_future_mutations",
+    "no_secrets_in_arguments_output_logs_or_history"
+  ],
+  "migration_gates": [
+    "MCP v2 staging build passes",
+    "public and owner route separation preserved",
+    "tool names and schemas preserved",
+    "Origin and hostname tests pass",
+    "legacy compatible client smoke passes",
+    "owner MCP remains fail-closed",
+    "no production deployment without explicit approval"
+  ],
+  "blocked_actions": [
+    "Mint",
+    "Certify",
+    "transfer",
+    "voucher mutation",
+    "privacy mutation",
+    "NFC binding",
+    "upload",
+    "wallet signing",
+    "provider secret disclosure"
+  ]
+}
+

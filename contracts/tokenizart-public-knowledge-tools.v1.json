@@ -1,0 +1,125 @@
+{
+  "schema": "tokenizart.public_knowledge_tools",
+  "version": "1.0.0",
+  "status": "implemented_local_not_deployed",
+  "owner": "Tokenizart",
+  "access_level": "Nivel 5",
+  "source_of_truth": [
+    "Obsidian",
+    "GitHub"
+  ],
+  "derived_runtime": [
+    "Gbrain",
+    "Cloudflare RAG API",
+    "Tokenizart public MCP"
+  ],
+  "routes": [
+    {
+      "path": "/knowledge/list",
+      "method": "POST",
+      "operation": "knowledge.list",
+      "input": {
+        "flow": "optional string",
+        "limit": "integer 1..50, default 20",
+        "cursor": "optional opaque v1 cursor"
+      },
+      "output_schema": "tokenizart.public_knowledge_list",
+      "mutation": "none"
+    },
+    {
+      "path": "/knowledge/get",
+      "method": "POST",
+      "operation": "knowledge.get",
+      "input": {
+        "id": "optional stable record id",
+        "source_path": "optional canonical source path",
+        "constraint": "at least one of id or source_path is required"
+      },
+      "output_schema": "tokenizart.public_knowledge_get",
+      "mutation": "none"
+    },
+    {
+      "path": "/search",
+      "method": "POST",
+      "operation": "knowledge.search",
+      "input": {
+        "query": "required string",
+        "flow": "optional string",
+        "limit": "integer 1..10, default 5",
+        "audience": "forced to public"
+      },
+      "output_schema": "tokenizart.public_knowledge_search",
+      "mutation": "none"
+    }
+  ],
+  "mcp_tools": [
+    {
+      "name": "knowledge.list",
+      "title": "List public Tokenizart knowledge",
+      "route": "/knowledge/list",
+      "read_only": true,
+      "idempotent": true,
+      "destructive": false,
+      "open_world": false
+    },
+    {
+      "name": "knowledge.get",
+      "title": "Get public Tokenizart knowledge",
+      "route": "/knowledge/get",
+      "read_only": true,
+      "idempotent": true,
+      "destructive": false,
+      "open_world": false
+    },
+    {
+      "name": "knowledge.search",
+      "title": "Search public Tokenizart knowledge",
+      "route": "/search",
+      "read_only": true,
+      "idempotent": true,
+      "destructive": false,
+      "open_world": false
+    }
+  ],
+  "record_policy": {
+    "access_level": "Nivel 5",
+    "status": "verified",
+    "embedding_policy": "embed",
+    "blocked_restricted_classes": [
+      "secret",
+      "financial_raw",
+      "legal_raw",
+      "source_code_sensitive"
+    ],
+    "citations_required": true,
+    "full_content_only_in": "knowledge.get"
+  },
+  "guardrails": {
+    "owner_context": "blocked",
+    "gestion_admin": "blocked",
+    "draft_or_needs_review": "blocked",
+    "nivel_1_to_4": "blocked",
+    "admin_routes": "blocked",
+    "admin_secret_forwarding": "blocked",
+    "mutations": "blocked",
+    "atelier_actions": [
+      "blocked:mint",
+      "blocked:certify",
+      "blocked:transfer",
+      "blocked:vouchers",
+      "blocked:privacy",
+      "blocked:nfc_binding",
+      "blocked:uploads",
+      "blocked:wallet_signing"
+    ],
+    "unexpected_fields": "removed by Companion response sanitizer",
+    "backend_policy_violation": "fail closed"
+  },
+  "deployment": {
+    "current": "local verification only",
+    "mcp_route": "/mcp",
+    "pilot_auth": "Cloudflare Access plus ADMIN_SECRET",
+    "public_registry": "blocked until endpoint stability, ownership verification and security review",
+    "production": "not authorized by this contract"
+  }
+}

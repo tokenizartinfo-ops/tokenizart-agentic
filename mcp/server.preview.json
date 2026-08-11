@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "info.tokenizart/public-readonly",
+  "description": "Verified public Tokenizart knowledge and Gallery traceability for humans and agents.",
+  "version": "0.1.0",
+  "status": "experimental_protected",
+  "repository": {
+    "url": "https://github.com/tokenizartinfo-ops/tokenizart-agentic",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://companion-staging.tokenizart.info/mcp"
+    }
+  ],
+  "_meta": {
+    "io.tokenizart/publication": {
+      "registry": "not_published",
+      "access_level": "Nivel 5",
+      "read_only": true,
+      "blocked_actions": [
+        "mint",
+        "certify",
+        "transfer",
+        "voucher_mutation",
+        "privacy_mutation",
+        "nfc_binding",
+        "upload",
+        "wallet_signing",
+        "owner_context",
+        "gestion_admin"
+      ]
+    }
+  }
+}

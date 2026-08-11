@@ -3,8 +3,14 @@
 Local alpha for Tokenizart's official contract-first CLI and future public
 Agent Skills package.
 
-Status: private local candidate. It is not published to npm, GitHub public,
-the MCP Registry or production.
+Status: public-repository release candidate. It is not published to npm, the
+MCP Registry or production.
+
+**Business model:** open edge + proprietary core. Tokenizart publishes clients,
+contracts, public skills and attributable knowledge while hosted execution,
+vouchers, transaction sponsorship, owner services and NFC operations remain
+proprietary. See [Business Model](docs/BUSINESS-MODEL.md),
+[Spanish version](docs/BUSINESS-MODEL.es.md) and [License Policy](LICENSE-POLICY.md).
 
 ## Current capabilities
 
@@ -66,3 +72,12 @@ node bin/tokenizart.js --profile staging --json demo open --flow certify --lang 
 | 8 | upstream service failure |
 
 The versioned boundary is `contracts/tokenizart-cli.v1.json`.
+
+## Discovery
+
+- [Public architecture](docs/ARCHITECTURE.md)
+- [MCP preview](mcp/server.preview.json)
+- [Artifact index](artifacts/index.json)
+- [API and MCP terms](API-TERMS.md)
+- [Commercial and white-label licensing](COMMERCIAL-LICENSING.md)
+- [Data and asset rights](DATA-AND-ASSETS-POLICY.md)

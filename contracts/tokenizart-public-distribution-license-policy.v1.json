@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokenizart.com/schemas/tokenizart-public-distribution-license-policy.v1.json",
+  "title": "Tokenizart Public Distribution License Policy",
+  "version": "1.0.0",
+  "approved_at": "2026-08-11",
+  "approved_by": "Gabriel Mucchiut",
+  "business_formula": "Interoperabilidad abierta, conocimiento atribuible, ejecucion propietaria y marca protegida.",
+  "repository": {
+    "owner": "tokenizartinfo-ops",
+    "name": "tokenizart-agentic",
+    "visibility": "public",
+    "authority": "public_clients_and_contracts_only"
+  },
+  "licenses": {
+    "code": "Apache-2.0",
+    "tokenizart_authored_public_documentation": "CC-BY-4.0",
+    "trademarks": "all-rights-reserved",
+    "third_party_assets": "per-resource",
+    "proprietary_core": "all-rights-reserved",
+    "white_label": "separate-commercial-agreement"
+  },
+  "open_edge": [
+    "cli",
+    "client_sdks",
+    "mcp_public_contracts",
+    "json_schemas",
+    "public_agent_skills",
+    "synthetic_examples",
+    "public_okf_bundle",
+    "public_blockchain_addresses_and_abi_read_interfaces"
+  ],
+  "proprietary_core": [
+    "atelier_backend",
+    "gestion_admin",
+    "owner_services",
+    "voucher_issuance_and_ledger",
+    "transaction_sponsorship_policy",
+    "pimlico_paymaster_configuration",
+    "nfc_creator_low_level_logic",
+    "secret_control_plane",
+    "private_orchestration",
+    "private_databases",
+    "business_mutation_automation"
+  ],
+  "monetization": [
+    "shop_vouchers",
+    "starter_kits",
+    "tokenizart_configured_nfc_chips",
+    "hosted_action_execution",
+    "transaction_sponsorship",
+    "api_and_mcp_plans",
+    "professional_services",
+    "enterprise_integrations",
+    "white_label_and_oem",
+    "support_and_sla"
+  ],
+  "blocked_public_capabilities": [
+    "mint_execute",
+    "certify_execute",
+    "transfer_execute",
+    "voucher_mutation",
+    "privacy_mutation",
+    "nfc_binding",
+    "upload",
+    "wallet_signing",
+    "owner_context",
+    "gestion_admin"
+  ],
+  "knowledge_policy": {
+    "access_level": "Nivel 5",
+    "status": "verified",
+    "embedding_policy": "embed",
+    "freshness_required": true,
+    "source_citations_required": true,
+    "third_party_rights_inherited": false
+  },
+  "publication_gates": [
+    "secret_scan_passed",
+    "private_path_scan_passed",
+    "license_map_valid",
+    "json_contracts_valid",
+    "okf_policy_passed",
+    "blocked_actions_absent",
+    "tests_passed",
+    "human_release_approval"
+  ]
+}
