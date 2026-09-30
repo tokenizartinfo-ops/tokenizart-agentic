@@ -34,6 +34,8 @@ El [repositorio público](https://github.com/tokenizartinfo-ops/tokenizart-agent
 
 Estas fronteras están definidas en el [contrato de distribución pública](../contracts/agentic-public-distribution.v1.json) y el [contrato CLI](../contracts/tokenizart-cli.v1.json). Un futuro MCP con herramientas de Atelier debe cumplirlas antes de ofrecer una acción: una llamada de la LLM no equivale al consentimiento ni a la firma del usuario.
 
+El [roadmap de ejecución gradual](ATELIER-AGENT-ACTIONS-ROADMAP.es.md) convierte esta evolución en bloques de entrega medibles: primero lectura de cuenta, después preparación y finalmente acciones supervisadas, ampliando skills, MCP y CLI con el mismo contrato por tarea.
+
 ## Ruta de descubrimiento
 
 Para humanos: [Tokenizart](https://tokenizart.com/), [recursos públicos de Atelier](https://atelier.tokenizart.com/recursos.html), [guía](https://tokenizart.com/es/tokenizart-y-atelier-guia-publica-y-descubrimiento-agentico/), [capacidades](https://tokenizart.com/es/atelier-capacidades/) y [Demo Atelier](https://github.com/tokenizartinfo-ops/tokenizart-atelier-demo). Para agentes: [README](../README.md) → [índice de skills](../skills/README.md) → skill específica → fuentes verificadas; y, si se necesita una herramienta de lectura, [CLI](../contracts/tokenizart-cli.v1.json) o [MCP preview](../mcp/server.preview.json) con sus restricciones de entorno.
