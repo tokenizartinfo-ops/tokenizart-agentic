@@ -78,6 +78,8 @@ The versioned boundary is `contracts/tokenizart-cli.v1.json`.
 
 ## Discovery
 
+- [Atelier toolbox: skills, CLI, MCP and action boundaries](docs/ATELIER-LLM-TOOLBOX.es.md)
+- [Task-oriented skill index](skills/README.md)
 - [Public architecture](docs/ARCHITECTURE.md)
 - [Public OKF v0.2 bundle](okf/v0.2/index.md)
 - [Public knowledge skill](skills/tokenizart-public-knowledge/SKILL.md)
