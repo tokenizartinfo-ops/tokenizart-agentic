@@ -18,7 +18,7 @@ test("public distribution contains the approved licenses, skills and OKF bundle"
   const result = await validatePublicDistribution(root);
 
   assert.deepEqual(result.errors, []);
-  assert.equal(result.skills, 3);
+  assert.equal(result.skills, 12);
   assert.equal(result.okfConcepts > 0, true);
 });
 

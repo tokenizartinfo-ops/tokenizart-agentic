@@ -26,6 +26,15 @@ const REQUIRED_SKILLS = [
   "skills/tokenizart-public-knowledge/SKILL.md",
   "skills/tokenizart-gallery-traceability/SKILL.md",
   "skills/tokenizart-demo-atelier/SKILL.md",
+  "skills/tokenizart-atelier-user-guide/SKILL.md",
+  "skills/tokenizart-atelier-account-wallet/SKILL.md",
+  "skills/tokenizart-atelier-artwork-preparation/SKILL.md",
+  "skills/tokenizart-atelier-vouchers/SKILL.md",
+  "skills/tokenizart-atelier-mint/SKILL.md",
+  "skills/tokenizart-atelier-certify/SKILL.md",
+  "skills/tokenizart-atelier-nfc/SKILL.md",
+  "skills/tokenizart-atelier-transfer/SKILL.md",
+  "skills/tokenizart-atelier-visibility/SKILL.md",
 ];
 
 const IGNORED_DIRECTORIES = new Set([".git", "node_modules"]);
